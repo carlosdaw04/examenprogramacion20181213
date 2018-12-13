@@ -18,7 +18,23 @@ public class Ejercicio3 {
 	 *  
 	 */
 	
-	public static ...
+	public static String[][] stringToArray2D (String cadena){
+		String[][] vector = new String[2][cadena.length()];
+		int j = 0;
+		int h = 0;
+		
+		for(int i = 0; i<cadena.length(); i++) {
+			if(cadena.codePointAt(i) % 2 == 0) {
+				vector[1][j] = cadena.substring(i, i+1);
+				j++;
+			}else {
+				vector[2][h] = cadena.substring(i, i+1);
+				h++;
+			}
+		}
+		return vector;
+	}
+	
 	
 	/*
 	 * 1 punto

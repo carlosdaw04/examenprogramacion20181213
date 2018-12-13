@@ -1,5 +1,8 @@
 package fp.daw.examen;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class Ejercicio5 {
 
 	/* 
@@ -16,8 +19,34 @@ public class Ejercicio5 {
 	 */
 	
 	public static void main(String[] args) {
+		Random r = new Random();
+		Scanner sc = new Scanner (System.in);
+		int numero_al;
+		int numero_us;
 		
-
+		String respuesta;
+		do {
+			int contador = 1;
+			do {
+				
+				numero_al = r.nextInt(1);
+				System.out.println("Escribe un numero:");
+				numero_us = sc.nextInt();
+				
+				if(numero_al == numero_us) {
+					System.out.println("Has acertado el numero.");
+					System.out.println("Número de intentos: " + contador);
+				}else {
+					contador++;
+				}
+			}while(numero_al != numero_us);
+			
+			System.out.println("¿Quieres volver a jugar? (S-N)");
+			
+			respuesta = sc.next();
+			
+		}while(respuesta.toLowerCase().equals("s"));
+		
 	}
 
 }

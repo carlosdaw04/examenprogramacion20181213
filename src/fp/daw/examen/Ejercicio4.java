@@ -1,5 +1,7 @@
 package fp.daw.examen;
 
+import java.util.Random;
+
 public class Ejercicio4 {
 
 	/* 
@@ -17,7 +19,16 @@ public class Ejercicio4 {
 	 * 
 	 */
 	
-	public static ...
+	public static int numSecuencias(int[] vector) {
+		int contador = 0;
+		for (int i=0; i<vector.length-1; i++) {
+			if(vector[i] == vector[i+1] && vector[i] != vector[i-1]) {
+				contador++;
+			}
+		}
+		return contador;
+		
+	}
 	
 	/*
 	 * 1 punto
@@ -31,8 +42,18 @@ public class Ejercicio4 {
 	 */
 	
 	public static void main(String[] args) {
+		Random r = new Random();
+		int[] vector = new int[r.nextInt(101)+10];
 		
-
+		for(int i=0; i<vector.length; i++) {
+			vector[i] = r.nextInt(201)-100;
+		}
+		
+		Ejercicio1.mostrarVector(vector);
+		
+		System.out.println();
+		
+		numSecuencias(vector);
 	}
 
 }

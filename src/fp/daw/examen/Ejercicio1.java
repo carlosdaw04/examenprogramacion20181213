@@ -14,7 +14,17 @@ public class Ejercicio1 {
 	 * donde num1, num2, num3, ..., numN son los números almacenados en el vector.
 	 */
 	
-	public static ...
+	public static void mostrarVector(int[] vector) {
+		for(int i=0; i<vector.length; i++) {
+			if (i == 0) {
+				System.out.print("[" + vector[i] + ", ");
+			}else if (i == vector.length-1) {
+				System.out.print(vector[i] + "]");
+			}else {
+				System.out.print(vector[i] + ", ");
+			}
+		}
+	}
 	
 	/* 
 	 * 1 punto
@@ -27,6 +37,15 @@ public class Ejercicio1 {
 	 * donde 'c1', 'c2', 'c3', ...., 'cN' son los caracteres almacenados en el vector.
 	 */
 
-	public static ...
-	
+	public static void mostrarVector2(int[] vector) {
+		for(int i=0; i<vector.length; i++) {
+			if (i == 0) {
+				System.out.print("['" + vector[i] + "', ");
+			}else if (i == vector.length-1) {
+				System.out.print("'" + vector[i] + "']");
+			}else {
+				System.out.print("'" + vector[i] + "', ");
+			}
+		}
+	}	
 }
