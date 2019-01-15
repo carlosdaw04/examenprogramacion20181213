@@ -18,17 +18,17 @@ public class Ejercicio3 {
 	 *  
 	 */
 	
-	public static String[][] stringToArray2D (String cadena){
-		String[][] vector = new String[2][cadena.length()];
+	public static char[][] stringToArray2D (String cadena){
+		char[][] vector = new char[2][cadena.length()];
 		int j = 0;
 		int h = 0;
 		
-		for(int i = 0; i<cadena.length(); i++) {
-			if(cadena.codePointAt(i) % 2 == 0) {
-				vector[1][j] = cadena.substring(i, i+1);
+		for(int i=0; i<cadena.length(); i++) {
+			if(i % 2 == 0) {
+				vector[0][j] = cadena.charAt(i);
 				j++;
 			}else {
-				vector[2][h] = cadena.substring(i, i+1);
+				vector[1][h] = cadena.charAt(i);
 				h++;
 			}
 		}
@@ -47,7 +47,15 @@ public class Ejercicio3 {
 	 */
 	
 	public static void main(String[] args) {
+		char[][] b;
 		
+		b = stringToArray2D("adios");
+		
+		for (int i=0; i<b.length; i++) {
+			for (int j=0; j<b[i].length; j++) {
+				System.out.print(b[i][j] + " ");
+			}
+			System.out.println();		}
 	}
 
 }
